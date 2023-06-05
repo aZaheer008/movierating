@@ -8,6 +8,11 @@ JWT_EXPIRES="JWT_EXPIRES"
 
 postmancollections has api file , please import it in postman for testing purpose.
 
+Pre requsite 
+
+Install Rabbitmq Locally on PC
+Install Elasticsearch Locally on PC
+
 
 
 ## Installation
