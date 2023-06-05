@@ -6,6 +6,8 @@ DB_URI= "Database connection url"
 JWT_SECRET="JWT_SECRET"
 JWT_EXPIRES="JWT_EXPIRES"
 
+postmancollections has api file , please import it in postman for testing purpose.
+
 
 
 ## Installation

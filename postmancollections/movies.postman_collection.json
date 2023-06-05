@@ -1,0 +1,949 @@
+{
+	"info": {
+		"_postman_id": "56cc6f2b-9fdc-4b31-8f31-da0acfc90a0d",
+		"name": "movies",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27781164"
+	},
+	"item": [
+		{
+			"name": "Fetch All Movies",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/movies",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"movies"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Fetch All Movies",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/movies",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"movies"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "269"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"10d-DYmymv/i6knuls7VETMV5/os+tc\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 03 Jun 2023 20:52:49 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"_id\": \"647ba7f51d6611f07c98de61\",\n        \"name\": \"Terminator1\",\n        \"description\": \"Action movie\",\n        \"release_date\": \"2023-06-03T20:50:18.709Z\",\n        \"ticket_price\": 15,\n        \"country\": \"America\",\n        \"genre\": \"Action\",\n        \"createdAt\": \"2023-06-03T20:52:05.480Z\",\n        \"updatedAt\": \"2023-06-03T20:52:05.480Z\",\n        \"__v\": 0\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "Create Movie",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0N2MxOWExNjY4NjdiYzBkZGExYjlkZiIsImlhdCI6MTY4NTg1NDg0MiwiZXhwIjoxNjg2MTE0MDQyfQ.UY7HjFOV6gLuKM03JNPAmwfKX8J0ghSFSSiIad1rgOQ",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"name\":\"Terminator444\", \"description\":\"Action movie\",\"release_date\":\"2023-06-03T20:50:18.709Z\",\"ticket_price\":15,\"country\":\"America\",\"genre\":\"Action\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/movies",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"movies"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Create Movie",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"name\":\"Terminator1\", \"description\":\"Action movie\",\"release_date\":\"2023-06-03T20:50:18.709Z\",\"ticket_price\":15,\"country\":\"America\",\"genre\":\"Action\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/movies",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"movies"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "267"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"10b-1oxN6nmPlRhGEMPJf6x0SB9mzys\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 03 Jun 2023 20:52:05 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"name\": \"Terminator1\",\n    \"description\": \"Action movie\",\n    \"release_date\": \"2023-06-03T20:50:18.709Z\",\n    \"ticket_price\": 15,\n    \"country\": \"America\",\n    \"genre\": \"Action\",\n    \"_id\": \"647ba7f51d6611f07c98de61\",\n    \"createdAt\": \"2023-06-03T20:52:05.480Z\",\n    \"updatedAt\": \"2023-06-03T20:52:05.480Z\",\n    \"__v\": 0\n}"
+				},
+				{
+					"name": "Create Movie",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0N2MxOWExNjY4NjdiYzBkZGExYjlkZiIsImlhdCI6MTY4NTg1NDg0MiwiZXhwIjoxNjg2MTE0MDQyfQ.UY7HjFOV6gLuKM03JNPAmwfKX8J0ghSFSSiIad1rgOQ",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"name\":\"Terminator3\", \"description\":\"Action movie\",\"release_date\":\"2023-06-03T20:50:18.709Z\",\"ticket_price\":15,\"country\":\"America\",\"genre\":\"Action\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/movies",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"movies"
+							]
+						}
+					},
+					"status": "Unauthorized",
+					"code": 401,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "43"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"2b-hGShxOkieaAVDloBubJVM+h58D8\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 04 Jun 2023 05:14:23 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"statusCode\": 401,\n    \"message\": \"Unauthorized\"\n}"
+				},
+				{
+					"name": "Create Movie",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0N2MxOWExNjY4NjdiYzBkZGExYjlkZiIsImlhdCI6MTY4NTg1NDg0MiwiZXhwIjoxNjg2MTE0MDQyfQ.UY7HjFOV6gLuKM03JNPAmwfKX8J0ghSFSSiIad1rgOQ",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"name\":\"Terminator3\", \"description\":\"Action movie\",\"release_date\":\"2023-06-03T20:50:18.709Z\",\"ticket_price\":15,\"country\":\"America\",\"genre\":\"Action\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/movies",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"movies"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "267"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"10b-OvOh7/+DUxnp5lE4FXkqJ9eXIjY\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 04 Jun 2023 05:15:08 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"name\": \"Terminator3\",\n    \"description\": \"Action movie\",\n    \"release_date\": \"2023-06-03T20:50:18.709Z\",\n    \"ticket_price\": 15,\n    \"country\": \"America\",\n    \"genre\": \"Action\",\n    \"_id\": \"647c1ddc7dbad66f1764736d\",\n    \"createdAt\": \"2023-06-04T05:15:08.267Z\",\n    \"updatedAt\": \"2023-06-04T05:15:08.267Z\",\n    \"__v\": 0\n}"
+				},
+				{
+					"name": "Create Movie",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0N2MxOWExNjY4NjdiYzBkZGExYjlkZiIsImlhdCI6MTY4NTg1NDg0MiwiZXhwIjoxNjg2MTE0MDQyfQ.UY7HjFOV6gLuKM03JNPAmwfKX8J0ghSFSSiIad1rgOQ",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"name\":\"Terminator3\", \"description\":\"Action movie\",\"release_date\":\"2023-06-03T20:50:18.709Z\",\"ticket_price\":15,\"country\":\"America\",\"genre\":\"Action\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/movies",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"movies"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "325"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"145-lsR09r2lULn4eD2tLtvwdYOcMkk\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 04 Jun 2023 14:56:20 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"name\": \"Terminator3\",\n    \"description\": \"Action movie\",\n    \"release_date\": \"2023-06-03T20:50:18.709Z\",\n    \"ticket_price\": 15,\n    \"ratingsum\": 0,\n    \"ratingcount\": 0,\n    \"commentcount\": 0,\n    \"rating\": 0,\n    \"country\": \"America\",\n    \"genre\": \"Action\",\n    \"_id\": \"647ca61362f96abc52aafede\",\n    \"createdAt\": \"2023-06-04T14:56:19.768Z\",\n    \"updatedAt\": \"2023-06-04T14:56:19.768Z\",\n    \"__v\": 0\n}"
+				}
+			]
+		},
+		{
+			"name": "Get Movie By Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/movies/647c1ddc7dbad66f1764736d",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"movies",
+						"647c1ddc7dbad66f1764736d"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get Movie By Id",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/movies/647bb1749ea7804a842164f0",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"movies",
+								"647bb1749ea7804a842164f0"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "267"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"10b-6rVr9DLHY0gjf4/MuyXLeph/yyg\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 03 Jun 2023 21:01:58 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"_id\": \"647ba7f51d6611f07c98de61\",\n    \"name\": \"Terminator1\",\n    \"description\": \"Action movie\",\n    \"release_date\": \"2023-06-03T20:50:18.709Z\",\n    \"ticket_price\": 15,\n    \"country\": \"America\",\n    \"genre\": \"Action\",\n    \"createdAt\": \"2023-06-03T20:52:05.480Z\",\n    \"updatedAt\": \"2023-06-03T20:52:05.480Z\",\n    \"__v\": 0\n}"
+				}
+			]
+		},
+		{
+			"name": "Update Movie By Id",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"name\":\"Terminator888888888888\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/movies/647d02ef673e5f185da98cc1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"movies",
+						"647d02ef673e5f185da98cc1"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Update Movie By Id",
+					"originalRequest": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"name\":\"Terminator2\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/movies/647ca61362f96abc52aafede",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"movies",
+								"647ca61362f96abc52aafede"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "267"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"10b-inl5+Ul0JV4g0SaynkiFve0TChg\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 03 Jun 2023 21:23:59 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"_id\": \"647ba7f51d6611f07c98de61\",\n    \"name\": \"Terminator2\",\n    \"description\": \"Action movie\",\n    \"release_date\": \"2023-06-03T20:50:18.709Z\",\n    \"ticket_price\": 15,\n    \"country\": \"America\",\n    \"genre\": \"Action\",\n    \"createdAt\": \"2023-06-03T20:52:05.480Z\",\n    \"updatedAt\": \"2023-06-03T21:23:58.839Z\",\n    \"__v\": 0\n}"
+				}
+			]
+		},
+		{
+			"name": "Movie Deleted By Id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/movies/647d02ef673e5f185da98cc1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"movies",
+						"647d02ef673e5f185da98cc1"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Movie Deleted By Id",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/movies/647ba7f51d6611f07c98de61",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"movies",
+								"647ba7f51d6611f07c98de61"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "267"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"10b-inl5+Ul0JV4g0SaynkiFve0TChg\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 03 Jun 2023 21:29:15 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"_id\": \"647ba7f51d6611f07c98de61\",\n    \"name\": \"Terminator2\",\n    \"description\": \"Action movie\",\n    \"release_date\": \"2023-06-03T20:50:18.709Z\",\n    \"ticket_price\": 15,\n    \"country\": \"America\",\n    \"genre\": \"Action\",\n    \"createdAt\": \"2023-06-03T20:52:05.480Z\",\n    \"updatedAt\": \"2023-06-03T21:23:58.839Z\",\n    \"__v\": 0\n}"
+				},
+				{
+					"name": "Movie Deleted By Id",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/movies/647ba7f51d6611f07c98de61",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"movies",
+								"647ba7f51d6611f07c98de61"
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "67"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"43-3C0G6l4wyVohpr1uVKuGcU/EvvA\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 03 Jun 2023 21:32:17 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"statusCode\": 404,\n    \"message\": \"Movie not found.\",\n    \"error\": \"Not Found\"\n}"
+				},
+				{
+					"name": "Movie Deleted By Id",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/movies/647bb1749ea7804a842164f0",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"movies",
+								"647bb1749ea7804a842164f0"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "40"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"28-P0m1GayTVzpCFtuQ/8eMF2WjilI\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 03 Jun 2023 21:33:45 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Movie Deleted Successfully\"\n}"
+				}
+			]
+		},
+		{
+			"name": "movierating",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0N2MxOWExNjY4NjdiYzBkZGExYjlkZiIsImlhdCI6MTY4NTg4NzIxMSwiZXhwIjoxNjg2MTQ2NDExfQ.jGKzT09_qPcYeXFaGqHrtavf68IyfFl8pA6uMbEWcrU",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"rating\":2}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/movies/ratemovie/647d0315f351d529b1ea6e5d",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"movies",
+						"ratemovie",
+						"647d0315f351d529b1ea6e5d"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "movierating",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0N2MxOWExNjY4NjdiYzBkZGExYjlkZiIsImlhdCI6MTY4NTg4NzIxMSwiZXhwIjoxNjg2MTQ2NDExfQ.jGKzT09_qPcYeXFaGqHrtavf68IyfFl8pA6uMbEWcrU",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"rating\":2}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/movies/ratemovie/647ca61362f96abc52aafede",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"movies",
+								"ratemovie",
+								"647ca61362f96abc52aafede"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "325"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"145-aBAdjA8A2RtAJv0hnTWU5IP+hIc\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 04 Jun 2023 15:01:16 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"_id\": \"647ca61362f96abc52aafede\",\n    \"name\": \"Terminator3\",\n    \"description\": \"Action movie\",\n    \"release_date\": \"2023-06-03T20:50:18.709Z\",\n    \"ticket_price\": 15,\n    \"ratingsum\": 2,\n    \"ratingcount\": 1,\n    \"commentcount\": 0,\n    \"rating\": 2,\n    \"country\": \"America\",\n    \"genre\": \"Action\",\n    \"createdAt\": \"2023-06-04T14:56:19.768Z\",\n    \"updatedAt\": \"2023-06-04T15:01:16.352Z\",\n    \"__v\": 0\n}"
+				}
+			]
+		},
+		{
+			"name": "movie comment",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0N2MxOWExNjY4NjdiYzBkZGExYjlkZiIsImlhdCI6MTY4NTg4NzIxMSwiZXhwIjoxNjg2MTQ2NDExfQ.jGKzT09_qPcYeXFaGqHrtavf68IyfFl8pA6uMbEWcrU",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"text\":\"Favourite Movie\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/movies/commentmovie/647ca61362f96abc52aafede",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"movies",
+						"commentmovie",
+						"647ca61362f96abc52aafede"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "movie comment",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0N2MxOWExNjY4NjdiYzBkZGExYjlkZiIsImlhdCI6MTY4NTg4NzIxMSwiZXhwIjoxNjg2MTQ2NDExfQ.jGKzT09_qPcYeXFaGqHrtavf68IyfFl8pA6uMbEWcrU",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"text\":\"Favourite Movie\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/movies/commentmovie/647ca61362f96abc52aafede",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"movies",
+								"commentmovie",
+								"647ca61362f96abc52aafede"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "325"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"145-jvAiclraOEXvgeov6NyF/VuTM08\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 04 Jun 2023 15:06:35 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"_id\": \"647ca61362f96abc52aafede\",\n    \"name\": \"Terminator3\",\n    \"description\": \"Action movie\",\n    \"release_date\": \"2023-06-03T20:50:18.709Z\",\n    \"ticket_price\": 15,\n    \"ratingsum\": 2,\n    \"ratingcount\": 1,\n    \"commentcount\": 1,\n    \"rating\": 2,\n    \"country\": \"America\",\n    \"genre\": \"Action\",\n    \"createdAt\": \"2023-06-04T14:56:19.768Z\",\n    \"updatedAt\": \"2023-06-04T15:06:34.787Z\",\n    \"__v\": 0\n}"
+				}
+			]
+		}
+	]
+}

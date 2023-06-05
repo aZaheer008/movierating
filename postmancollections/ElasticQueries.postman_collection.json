@@ -1,0 +1,178 @@
+{
+	"info": {
+		"_postman_id": "f0077a91-49aa-403d-9ead-b5201e60edc0",
+		"name": "ElasticQueries",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27781164"
+	},
+	"item": [
+		{
+			"name": "Movies From Elastic by Filtering",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"field\":\"name\",\"value\":\"Terminat\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/movies/moviesfromelasticbyfiltering",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"movies",
+						"moviesfromelasticbyfiltering"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "moviesfromelasticbyfiltering",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"field\":\"name\",\"value\":\"Terminat\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/movies/moviesfromelasticbyfiltering",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"movies",
+								"moviesfromelasticbyfiltering"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "490"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"1ea-noRxo6sofc7uDuospxSEvYNaZBY\""
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 05 Jun 2023 04:32:17 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"took\": 6,\n    \"timed_out\": false,\n    \"_shards\": {\n        \"total\": 1,\n        \"successful\": 1,\n        \"skipped\": 0,\n        \"failed\": 0\n    },\n    \"hits\": {\n        \"total\": {\n            \"value\": 1,\n            \"relation\": \"eq\"\n        },\n        \"max_score\": 0.6049785,\n        \"hits\": [\n            {\n                \"_index\": \"movies\",\n                \"_id\": \"yS3QiYgBPJA1ioTxQtpW\",\n                \"_score\": 0.6049785,\n                \"_source\": {\n                    \"name\": \"Terminator444\",\n                    \"description\": \"Action movie\",\n                    \"release_date\": \"2023-06-03T20:50:18.709Z\",\n                    \"ticket_price\": 15,\n                    \"ratingsum\": 0,\n                    \"ratingcount\": 0,\n                    \"commentcount\": 0,\n                    \"rating\": 0,\n                    \"country\": \"America\",\n                    \"genre\": \"Action\",\n                    \"mongodbId\": \"647d646ab12d4d56ad2cf827\"\n                }\n            }\n        ]\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Movies From Elastic",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/movies/moviesfromelastic",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"movies",
+						"moviesfromelastic"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Movies From Elastic",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/movies/moviesfromelastic",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"movies",
+								"moviesfromelastic"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "476"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"1dc-Vd9SjC0UJoT0Wj8Y56zzdaaYxco\""
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 05 Jun 2023 04:28:35 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"took\": 597,\n    \"timed_out\": false,\n    \"_shards\": {\n        \"total\": 1,\n        \"successful\": 1,\n        \"skipped\": 0,\n        \"failed\": 0\n    },\n    \"hits\": {\n        \"total\": {\n            \"value\": 1,\n            \"relation\": \"eq\"\n        },\n        \"max_score\": 1,\n        \"hits\": [\n            {\n                \"_index\": \"movies\",\n                \"_id\": \"yS3QiYgBPJA1ioTxQtpW\",\n                \"_score\": 1,\n                \"_source\": {\n                    \"name\": \"Terminator444\",\n                    \"description\": \"Action movie\",\n                    \"release_date\": \"2023-06-03T20:50:18.709Z\",\n                    \"ticket_price\": 15,\n                    \"ratingsum\": 0,\n                    \"ratingcount\": 0,\n                    \"commentcount\": 0,\n                    \"rating\": 0,\n                    \"country\": \"America\",\n                    \"genre\": \"Action\",\n                    \"mongodbId\": \"647d646ab12d4d56ad2cf827\"\n                }\n            }\n        ]\n    }\n}"
+				}
+			]
+		}
+	]
+}
